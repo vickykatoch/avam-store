@@ -14,3 +14,19 @@ export function loadArticles(){
                 });
     };
 }
+export function saveArticleSuccess(article,type){
+    return { type, article };
+}
+
+export function saveArticle(article){
+    return function (dispatch) {
+        return ArticlesApi.saveArticle(article)
+            .then(a=>{
+                let atype = article.id===0 ? actionTypes.CREATE_ARTICLES_SUCCESS : actionTypes.UPDATE_ARTICLES_SUCCESS;
+                dispatch(saveArticleSuccess(a,atype));
+            })
+            .catch(error=> { 
+                throw(error);
+            });
+    };
+}
