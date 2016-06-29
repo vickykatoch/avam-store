@@ -5,6 +5,8 @@ import routes from './routes';
 import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
 import {loadArticles} from './actions/articleActions';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 let store = configureStore();
 store.dispatch(loadArticles());
