@@ -2,22 +2,26 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/articleActions';
+import ArticleList from './articleList';
 
-export default class ArticlesPage extends React.Component{
+class ArticlesPage extends React.Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return (
-            <h1>Article Store</h1>
+            <div>
+                <ArticleList articles={this.props.articles}/>
+            </div>
         );
     }
 }
-
-/*
 ArticlesPage.propTypes = {
     articles : React.PropTypes.array.isRequired,
     actions : React.PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps){
+function mapStateToProps(state /*, ownProps*/){
     return {
         articles : state.articles
     };
@@ -27,5 +31,4 @@ function mapDispatchToProps(dispatch){
         actions : bindActionCreators(articleActions, dispatch)
     };
 }
-connect(mapStateToProps, mapDispatchToProps)(ArticlesPage);
-*/
+export default connect(mapStateToProps, mapDispatchToProps)(ArticlesPage);

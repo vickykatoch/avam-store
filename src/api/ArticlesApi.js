@@ -14,6 +14,22 @@ const articles = [{
         author :  'John Papa',
         publishDate : new Date(2010,5,12),
         loadedDate :  new Date(2012,6,12)
+    },
+    {
+        id: 3,
+        title: 'WPF Fundamentals',
+        description: 'A detailed description about WPF',
+        author :  'John Papa',
+        publishDate : new Date(2010,5,12),
+        loadedDate :  new Date(2012,6,12)
+    },
+    {
+        id: 4,
+        title: 'Angular Fundamentals',
+        description: 'A detailed description about Angular',
+        author :  'John Papa',
+        publishDate : new Date(2010,5,12),
+        loadedDate :  new Date(2012,6,12)
     }
 ];
 

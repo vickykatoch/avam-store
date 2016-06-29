@@ -3,7 +3,7 @@ import * as actionTypes from '../constants/actionTypes';
 export default function articlesReducer(state=[], action) {
     switch(action.type){
         case actionTypes.LOAD_ARTICLES_SUCCESS:
-            return state;
+            return action.articles;
         case actionTypes.CREATE_ARTICLES_SUCCESS:
             return [...state, Object.assign({},action.article)];
         case actionTypes.UPDATE_ARTICLES_SUCCESS:
