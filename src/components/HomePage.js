@@ -6,7 +6,9 @@ const HomePage = (props) => {
         <div>
             <div className="jumbotron">
                 <h1>Article Store</h1>
-                    <p>This is a template for a simple marketing or informational website.It includes a large callout called a jumbotron and three supporting pieces of content.Use it as a starting point to create something more unique.</p>
+                    <p>
+                    React, Redux and React Router in ES6 for ultra-responsive web apps.
+                    </p>
                     <p>
                         <Link to="articles" className="btn btn-primary btn-lg">Articles</Link>
                     </p>

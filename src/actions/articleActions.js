@@ -30,3 +30,13 @@ export function saveArticle(article){
             });
     };
 }
+export function newArticle(){
+    return {
+        id: 0,
+        title: '',
+        description: '',
+        author :  '',
+        publishDate :null,
+        loadedDate :  null
+    };
+}
